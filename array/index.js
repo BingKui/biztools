@@ -16,7 +16,9 @@ const ArrayTools = {
         return _result;
     },
     // 数组合并同时去重
-    arrMergeAndRemoveRepeat: () => {},
+    arrMergeAndRemoveRepeat: (...args) => {
+        return this.arrRemoveRepeat(this.arrMerge(args));
+    },
     // 数组顺序打乱
     arrUpset: (arr) => {
         return arr.sort(() => {
